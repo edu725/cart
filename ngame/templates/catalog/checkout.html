@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-lg-6">
         <h2>Endereço de Entrega</h2>
         <form method="post">
             {% csrf_token %}
@@ -30,7 +30,8 @@
                 <label for="zip_code" class="form-label">CEP</label>
                 <input type="text" class="form-control" id="zip_code" name="zip_code">
             </div>
-            <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+            <button type="submit" class="btn back-botton">Finalizar Compra</button>
         </form>
+    </div>
 </div>
 {% endblock %}

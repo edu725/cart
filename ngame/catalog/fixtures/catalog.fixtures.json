@@ -1,0 +1,36 @@
+[
+    {
+        "model": "catalog.game",
+        "pk": 3,
+        "fields": {
+            "title": "Mario Odyssey",
+            "path": "img/2024/07/03/mario.png",
+            "description": "Mario Odyssey",
+            "price": "209.00",
+            "amount": 3000
+        }
+    },
+    {
+        "model": "catalog.game",
+        "pk": 4,
+        "fields": {
+            "title": "Marvel Spider-man",
+            "path": "img/2024/07/03/spider.png",
+            "description": "Marvel Spider-man Remaster",
+            "price": "150.58",
+            "amount": 3000
+        }
+    },
+    {
+        "model": "catalog.game",
+        "pk": 5,
+        "fields": {
+            "title": "Forza Horizon 5",
+            "path": "img/2024/07/03/forza.jpg",
+            "description": "Forza Horizon 5",
+            "price": "144.99",
+            "amount": 3000
+        }
+    }
+
+]

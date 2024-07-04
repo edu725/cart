@@ -4,9 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGame</title>
+    <title>GameSpot</title>
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
     {% block style %}
+    <style>
+        .back-botton{
+            background-color: rgb(206, 17, 17);
+            color: white;
+        }
+        .back-botton2{
+            background-color: black;
+            color: white;
+        }
+        .fonte{
+            font-family: Arial-Bold;
+            font-size: 30px;
+        }
+    </style>
     {% endblock %}
     {% block script %}
     {% endblock %}
@@ -23,7 +37,7 @@
 
     <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
     
-    {% include "partials/_footer.html" %}
+    
     {% include "partials/_register.html" %}
     {% include "partials/_login.html" %}
   

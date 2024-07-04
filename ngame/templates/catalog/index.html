@@ -11,7 +11,7 @@
         <img src="{% static 'assets/img/pexels-citronovalimonada-687811.jpg' %}" class="d-block w-100" alt="jogos">
       </div>
       <div class="carousel-item">
-        <img src="{% static 'assets/img/pexels-jeswin-700971.jpg' %}" class="d-block w-100" alt="jogos">
+        <img src="{% static 'assets/img/xbox.jpg' %}" class="d-block w-100" alt="jogos">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -23,8 +23,14 @@
       <span class="visually-hidden">Proximo</span>
     </button>
   </div>
-  <div class="row">
+  <div class="pt-5 pb-1" style="text-align: center; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-style: italic;">
+    <h1 style="color: rgb(184, 14, 14);">
+      Principais Ofertas !!!
+    </h1>
+  </div>
+  <div class="row pt-3">
     {% include 'partials/_card.html' %}
     {% include 'partials/_detail.html' %}
 </div>
+{% include "partials/_footer.html" %}
 {% endblock %}
