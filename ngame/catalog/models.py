@@ -14,6 +14,9 @@ class Game(models.Model):
     def total_comments(self):
         return Comment.objects.filter(game=self).count()
     
+    def total_price(self):
+        return Game.objects.filter(game=self).count()
+    
     def user_commented(self, user):
         return Comment.objects.filter(game=self, user=user).exists()
     

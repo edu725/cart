@@ -26,6 +26,12 @@ def index(request):
     return render(request, 'catalog/index.html', {'games': data_games})
 
 @login_required
+def total_price(request, game_price):
+    value = get_object_or_404(Game, price = game_price)
+    return JsonResponse('quantity' * value )
+
+
+@login_required
 def like_game(request, game_id):
     game = get_object_or_404(Game, id=game_id)
     like, created = Like.objects.get_or_create(user=request.user, game=game)
