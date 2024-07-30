@@ -1,0 +1,11 @@
+{% load static %}
+{% for item in games %}
+<div class="col-sm-6 col-md-4 col-lg-4 mb-4" id="games">
+        <div class="card mb-4">
+            <img class="card-img-top" src="{{ item.game.path.url }}" alt="{{ item.game.title }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.game.title }}</h5>
+            </div>
+        </div>           
+</div>
+{% endfor %}

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord</title>
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    {% block style %}
+    <style>
+        .back-botton{
+            background-color: rgb(206, 17, 17);
+            color: white;
+        }
+        .back-botton2{
+            background-color: black;
+            color: white;
+        }
+        .back{
+            background-color:#ff2200c7 ;
+        }
+        .fonte{
+            font-family: Arial-Bold;
+            font-size: 30px;
+        }
+    </style>
+    {% endblock %}
+    {% block script %}
+    {% endblock %}
+</head>
+<body>
+    {% include "partials/side.html" %}
+    <div class="mt-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    
+    
+    {% include "partials/register.html" %}
+    {% include "partials/login.html" %}
+  
+</body>
+</html>

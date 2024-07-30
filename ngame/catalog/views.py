@@ -10,6 +10,21 @@ def home(request):
     games = Game.objects.all()
     return render(request, 'catalog/home.html', {'games': games})
 
+@login_required
+def produtos(request):
+    games = Game.objects.all()
+    return render(request, 'catalog/produtos.html', {'games': games})
+
+@login_required
+def home_dashbord(request):
+    games = Game.objects.all()
+    return render(request, 'catalog/dashbord.html', {'games': games})
+
+@login_required
+def dashbord(request):
+    games = Game.objects.all()
+    return render(request, 'catalog/dashbord.html', {'games': games})
+
 def index(request):
     user = request.user
     games = Game.objects.all()

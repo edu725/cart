@@ -33,3 +33,31 @@ def register_view(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+def login_dashbord(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            user_temp = User.objects.get(email= email)
+            user = authenticate(username=user_temp, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('dashbord')
+    return redirect('dashbord')
+
+def register_dashbord(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Cadastrado com sucesso!')
+            return redirect('login1')
+        else:
+            messages.error(request, 'Erro ao cadastrar!')            
+    return redirect('dashbord')
+
+def logout_dashbord(request):
+    logout(request)
+    return redirect('dashbord')
